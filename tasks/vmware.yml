@@ -1,0 +1,8 @@
+---
+- name: Copy iptables config
+  copy:
+    src: iptables
+    dest: /etc/sysconfig/iptables
+    mode: 0600
+    owner: root
+    group: root
