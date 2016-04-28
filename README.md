@@ -30,6 +30,15 @@ users:
     pubkey: 'ssh-rsa anotherpubkey centos@example.org'
 ```
 
+Need host entries for /etc/hosts
+```
+etc_hosts:
+  - ip: '192.168.0.1'
+    names: 'shortname-one shortname-one.example.com'
+  - ip: '192.168.0.2'
+    names: 'shortname-two shortname-two.example.com'
+```
+
 Dependencies
 ------------
 

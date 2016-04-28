@@ -1,4 +1,11 @@
 ---
+- name: Copy /etc/hosts
+  template:
+    src: hosts.j2
+    dest: /etc/hosts
+    mode: 0644
+    owner: root
+    group: root
 - name: Copy hosts.allow
   template:
     src: hosts.allow.j2
