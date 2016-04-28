@@ -1,0 +1,7 @@
+---
+- name: DenyHosts package.
+  yum: name={{ item }} state=present
+  with_items:
+  - denyhosts
+- name: Security updates
+  command: yum -y update --security

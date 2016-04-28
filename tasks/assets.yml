@@ -1,0 +1,22 @@
+---
+- name: Copy hosts.allow
+  template:
+    src: hosts.allow.j2
+    dest: /etc/hosts.allow
+    mode: 0644
+    owner: root
+    group: root
+- name: Copy hosts.deny
+  copy:
+    src: hosts.deny
+    dest: /etc/hosts.deny
+    mode: 0644
+    owner: root
+    group: root
+- name: Copy ssdh_config
+  template:
+    src: ssh_config.j2
+    dest: /etc/ssh/ssh_config
+    mode: 0600
+    owner: root
+    group: root

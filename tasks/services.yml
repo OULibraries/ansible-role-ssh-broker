@@ -1,0 +1,11 @@
+---
+- name: Start denyhosts on boot
+  service:
+    name: denyhosts
+    state: started
+    enabled: yes
+- name: Restart sshd
+  service:
+    name: sshd
+    state: restarted
+    enabled: yes

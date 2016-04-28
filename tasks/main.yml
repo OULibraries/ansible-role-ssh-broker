@@ -1,0 +1,8 @@
+---
+- include: assets.yml
+  sudo: yes
+  tags: assets
+- include: yum.yml
+  sudo: yes
+- include: services.yml
+  sudo: yes
