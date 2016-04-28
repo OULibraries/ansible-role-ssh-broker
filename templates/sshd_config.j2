@@ -14,7 +14,7 @@ SyslogFacility AUTHPRIV
 # Authentication:
 PermitRootLogin no
 DenyUsers vagrant
-{% for user in users %} AllowUsers {{ user.name }}{% endfor %}
+AllowUsers{% for user in users %} {{ user.name }}{% endfor %}
 AuthorizedKeysFile	.ssh/authorized_keys
 PasswordAuthentication no
 ChallengeResponseAuthentication no
