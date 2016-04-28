@@ -12,12 +12,13 @@ HostKey /etc/ssh/ssh_host_ed25519_key
 SyslogFacility AUTHPRIV
 
 # Authentication:
-PermitRootLogin no
-DenyUsers vagrant
-AllowUsers{% for user in users %} {{ user.name }}{% endfor %}
 AuthorizedKeysFile	.ssh/authorized_keys
 PasswordAuthentication no
 ChallengeResponseAuthentication no
+PermitRootLogin no
+DenyUsers vagrant
+AllowUsers{% for user in users %} {{ user.name }}{% endfor %}
+
 
 # GSSAPI options
 GSSAPIAuthentication yes
