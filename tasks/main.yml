@@ -1,13 +1,13 @@
 ---
 - include: assets.yml
-  sudo: yes
+  become: true
   tags: assets
 - include: yum.yml
-  sudo: yes
+  become: true
 - include: vmware.yml
   when: (ansible_virtualization_type == "VMware") and (ansible_virtualization_role == "guest")
-  sudo: yes
+  become: true
   tags:
   - vmware
 - include: services.yml
-  sudo: yes
+  become: true
