@@ -48,7 +48,7 @@ Example Playbook
 License
 -------
 
-To be determined
+[MIT](https://github.com/OULibraries/ansible-role-ssh-broker/blob/master/LICENSE)
 
 Author Information
 ------------------
